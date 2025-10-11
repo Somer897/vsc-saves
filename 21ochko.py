@@ -9,9 +9,9 @@ while money>0:
     print('Ваш счёт:', money)
     stavka = int(input('Какова ваша ставка?: '))               #Ставка
     if stavka > money:
-        print('Ты даун?')
+        print('Error')
         money -= 100
-        print('Дауны платят компенсацию в размере 100 рублей')
+        print('Компенсация 100 рублей')
     else:
         if choice == 1:
             invent = random.randint(start, end)            #Инвентарь
@@ -41,24 +41,24 @@ while money>0:
                 if invent > inventor1:
                     if invent == 21:
                         print('У противника: ', inventor1)
-                        print('Блэкджек! Поздравляем!')
+                        print('Блэкджек! Поздравляем! +', stavka * 2)
                         money += (stavka * 2)
                     else:
                         print('У противника: ', inventor1)
-                        print('Поздравляем!')
+                        print('Поздравляем!, +', stavka)
                         money += stavka
                 elif invent < inventor1:
                     print('У противника: ', inventor1)
-                    print('Ты проебал')
+                    print('Вы проиграли, -', stavka)
                     money -= stavka
                 else:
                     print('У противника: ', inventor1)
                     print('Ничья!')
                     money = money
             else:
-                print('У пк перебор, вы победили!')
+                print('У пк перебор, вы победили! +', stavka)
                 money += stavka
         else:
-            print('Перебор')
+            print('Перебор, -', stavka)
             money -= stavka
-input('Ебать ты лошара!')
+input('Казна пуста!')
