@@ -9,7 +9,6 @@ def bubble_sort(nums):
     k = 0
 
     while swapped:
-        swapped = False
         for i in range(len(nums) - 1):                #цикл для смен
 
             n = 0                             #обновление переменных для новой итерации
@@ -45,5 +44,4 @@ def bubble_sort(nums):
                 swapped = True
 
 random_list_of_nums = [5, 2, 1, 8, 4]
-bubble_sort(random_list_of_nums)
 print(bubble_sort(random_list_of_nums))
