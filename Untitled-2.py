@@ -28,6 +28,7 @@ def bubble_sort(nums):
             
             if n == 0:                               #если инверсии кончились
                 swapped = False
+                return nums
 
             elif n >= k:                                     #меняем местами если в ту сторону больше инверсий
                 for i in range(len(nums) - 1):
@@ -43,7 +44,6 @@ def bubble_sort(nums):
                 nums.reverse()
                 swapped = True
 
-print('0')
 random_list_of_nums = [5, 2, 1, 8, 4]
 bubble_sort(random_list_of_nums)
-print(random_list_of_nums)
+print(bubble_sort(random_list_of_nums))
