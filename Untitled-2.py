@@ -1,12 +1,12 @@
+import datetime
 def bubble_sort(nums):
     swapped = True
+
+    tics = 0                           #задаем кол-во итераций
 
     nums = list(nums)                       #чтобы работали реверсы
     for i in range(len(nums)):
         nums[i] = int(nums[i])
-
-    n = 0                                      #параметры для сравнения
-    k = 0
 
     while swapped:
         for i in range(len(nums) - 1):                #цикл для смен
@@ -27,6 +27,7 @@ def bubble_sort(nums):
             
             if n == 0:                               #если инверсии кончились
                 swapped = False
+                print('Количество операций:', tics)
                 return nums
 
             elif n >= k:                                     #меняем местами если в ту сторону больше инверсий
@@ -42,6 +43,15 @@ def bubble_sort(nums):
                         nums[i], nums[i + 1] = nums[i + 1], nums[i]
                 nums.reverse()
                 swapped = True
+            tics += 1
+        
+start_time = datetime.datetime.now()                                                                            #начало времени запуска проги
 
-random_list_of_nums = [5, 2, 1, 8, 4]
-print(bubble_sort(random_list_of_nums))
+random_list_of_nums = (input('Введите свой список: ')).split()          #создание списка
+for i in range(len(random_list_of_nums)):
+    random_list_of_nums[i] = int(random_list_of_nums[i])
+
+end_time = datetime.datetime.now()                                                                               #конец времени запуска проги
+print('Время выполнения кода: ', end_time - start_time)                                                          #вывод времени выполнения программы
+
+print(bubble_sort(random_list_of_nums))                                     #вывод списка
