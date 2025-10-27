@@ -13,6 +13,7 @@ choice = input("\nОперация: ")
 
 if choice == '1':
   print(f"{number1} + {number2} = {number1 + number2} ")
+  
 elif choice == '2':
   print(f"{number1} - {number2} = {number1 - number2} ")
 
