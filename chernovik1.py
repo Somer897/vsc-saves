@@ -20,7 +20,7 @@ while left <= right:
     if x[mid] == isk:                            # if 2750 = iskomoe
         index = mid
         is_found = True
-        break                                   # vihod nahui
+        break                                   # vihod 
 
     elif x[mid] < isk:
         left = mid + 1
