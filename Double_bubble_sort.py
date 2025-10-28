@@ -51,7 +51,7 @@ random_list_of_nums = (input('Введите свой список: ')).split() 
 for i in range(len(random_list_of_nums)):
     random_list_of_nums[i] = int(random_list_of_nums[i])
 
+print(bubble_sort(random_list_of_nums))                                     #вывод списка
+
 end_time = datetime.datetime.now()                                                                               #конец времени запуска проги
 print('Время выполнения кода: ', end_time - start_time)                                                          #вывод времени выполнения программы
-
-print(bubble_sort(random_list_of_nums))                                     #вывод списка
